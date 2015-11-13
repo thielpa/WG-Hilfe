@@ -1,9 +1,7 @@
-var app = angular.module('wgHilfe', [
+angular.module('wgHilfe', [
 	"ngMaterial",
 	"ngRoute"
-]);
-
-app.config(function($mdThemingProvider) {
+]).config(function($mdThemingProvider) {
   $mdThemingProvider.definePalette('soft-orange', {
     '50': 'FBE9E7',
     '100': 'FFCCBC',
@@ -26,4 +24,8 @@ app.config(function($mdThemingProvider) {
 
   $mdThemingProvider.theme('default')
     .primaryPalette('soft-orange');
+}).run(function($rootScope, $mdSidenav) {
+  $rootScope.toggleSidenav = function() {
+    $mdSidenav('left').toggle();
+  };
 });
