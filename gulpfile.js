@@ -18,7 +18,7 @@ gulp.task("scripts", function() {
       .pipe(license("Apache", {
         organization: 'Werdenfels-Gymnasium All rights reserved.'
       }))
-      .pipe(gulp.dest(dist + "/js"))
+      .pipe(gulp.dest(dist + "/js"));
 });
 
 gulp.task("styles", function() {

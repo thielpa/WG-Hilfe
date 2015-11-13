@@ -28,4 +28,17 @@ angular.module('wgHilfe', [
   $rootScope.toggleSidenav = function() {
     $mdSidenav('left').toggle();
   };
+}).config(function($routeProvider, $locationProvider) {
+  $routeProvider.when("/", {
+    templateUrl: 'partials/home.tmpl.html',
+    controller: "HomeController"
+  }).when("/guide/:name", {
+    templateUrl: 'partials/guide.tmpl.html',
+    controller: "GuideController",
+    secure: true
+  }).otherwise({
+    templateUrl: 'templates/404.html'
+  });
+
+  $locationProvider.html5Mode(false);
 });

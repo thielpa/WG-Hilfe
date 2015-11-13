@@ -6,27 +6,29 @@
 	<link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css">
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
-<body>
+<body class="layout-row">
 
-  <md-toolbar layout="row">
-    <div class="md-toolbar-tools">
-      <md-button ng-click="toggleSidenav()" class="md-icon-button" aria-label="Sidenav" nofocus>
-        <md-icon md-svg-icon="img/menu.svg"></md-icon>
-      </md-button>
-      <a ng-href="#/">
-        <h2>
-          <span>Werdenfels-Gymnasum Hilfe</span>
-        </h2>
-      </a>
-    </div>
-  </md-toolbar>
-
-  <md-sidenav md-component-id="left" class="md-sidenav-left">
+  <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-sidenav-left" tabindex="-1">
       <md-menu-item ng-href="#/home" ng-label="Home" />
   </md-sidenav>
 
-	<div ng-view flex></div>
+  <div tabindex="-1" role="main" class="layout-column flex">
+    <md-toolbar layout="row">
+      <div class="md-toolbar-tools">
+        <md-button ng-click="toggleSidenav()" class="md-icon-button" aria-label="Sidenav" nofocus>
+          <md-icon md-svg-icon="img/menu.svg"></md-icon>
+        </md-button>
+        <a ng-href="#/">
+          <h2>
+            <span>Werdenfels-Gymnasum Hilfe</span>
+          </h2>
+        </a>
+      </div>
+    </md-toolbar>
 
+    <div ng-view flex></div>
+
+  </div>
 </body>
 
 <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
