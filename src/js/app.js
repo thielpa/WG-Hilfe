@@ -39,7 +39,6 @@
   app.config(function($routeProvider, $locationProvider) {
     $routeProvider.when("/", {
       templateUrl: 'partials/home.tmpl.html',
-      controller: "HomeController"
     }).when("/guide/:id", {
       templateUrl: 'partials/guide.tmpl.html',
       controller: "GuideController",
