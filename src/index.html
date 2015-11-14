@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="wgHilfe">
+<html ng-app="wgHilfe" ng-controller="RootController">
 <head>
 	<title>Werdenfels-Gymnasium</title>
 
@@ -8,8 +8,8 @@
 </head>
 <body class="layout-row">
 
-  <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-sidenav-left" tabindex="-1">
-      <md-menu-item ng-href="#/home" ng-label="Home" />
+  <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-sidenav-left" tabindex="-1" ng-repeat="(key, value) in guides">
+      <md-menu-item ng-href="#/guide/{{ key }}" ng-label="{{ value.title }}" />
   </md-sidenav>
 
   <div tabindex="-1" role="main" class="layout-column flex">

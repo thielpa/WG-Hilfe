@@ -1,7 +1,7 @@
 angular.module('wgHilfe')
   .controller('GuideController', GuideController);
 
-function GuideController($scope, $routeParams, GuideService) {
+function GuideController($scope, $routeParams, $location, GuideService) {
 
   var guides;
   var id = $routeParams.id;
@@ -10,8 +10,8 @@ function GuideController($scope, $routeParams, GuideService) {
     guides = data;
     loadGuide();
   }, function(error) {
-    alert("An error occoured");
-    //TODO HANDLE THAT ERROR
+    $scope.title = "Fehler";
+    $scope.error = "Es ist ein Fehler beim Laden der Anleitungen aufgetreten.";
   });
 
   function loadGuide() {
@@ -20,8 +20,8 @@ function GuideController($scope, $routeParams, GuideService) {
       $scope.title = guide.title;
       $scope.path = 'content/guides/' + guide.path;
     } else {
-      alert("GUIDE DOESNT EXISTS");
-      //TODO HANDLE THAT ERROR
+      $scope.title = "Fehler";
+      $scope.error = "Die gesuchte Anleitung konnte nicht in unserer Datenbank gefunden werden.";
     }
   }
 

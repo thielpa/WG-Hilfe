@@ -5,7 +5,15 @@
 </md-toolbar>
 <div class="md-whiteframe-z1 padding">
 
-  <div marked src="path">
+  <div ng-if="!error" marked src="path">
+  </div>
+
+  <div ng-if="error">
+    {{ error }}
+
+    <p>
+      <md-button class="md-raised md-primary" ng-href="#/">Zurück zur Startseite</md-button>
+    </p>
   </div>
 
 </div>
