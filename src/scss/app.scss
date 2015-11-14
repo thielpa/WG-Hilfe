@@ -10,7 +10,7 @@ body {
   border-radius: 2px;
 
   .padding {
-    padding: 15px 15px 15px;
+    padding: 15px 15px 5px;
   }
 
   h1, h2, h3, h4 {
@@ -22,4 +22,21 @@ body {
 a {
   text-decoration: none;
   color: grey;
+}
+
+
+md-sidenav {
+
+  .brand {
+    padding: 16px 0px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
 }

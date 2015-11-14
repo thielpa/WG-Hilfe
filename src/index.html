@@ -9,6 +9,14 @@
 <body class="layout-row">
 
   <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-sidenav-left" tabindex="-1" ng-repeat="(key, value) in guides">
+
+      <div class="brand">
+        <a ng-href="#/">
+          <img src="img/werdenfelsgymnasium.jpg">
+        </a>
+      </div>
+
+
       <md-menu-item ng-href="#/guide/{{ key }}" ng-label="{{ value.title }}" />
   </md-sidenav>
 
@@ -29,7 +37,7 @@
     </md-toolbar>
 
     <section layout="row" layout-align="center start">
-      <md-content class="frameContent">
+      <md-content class="frameContent md-whiteframe-1dp">
         <div ng-view flex></div>
       </md-content>
     </section>
