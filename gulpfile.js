@@ -45,9 +45,9 @@ gulp.task("copy-html", function() {
       .pipe(gulp.dest(dist));
 });
 
-gulp.task("copy-markdown", function() {
-  return gulp.src("src/markdown/**/*")
-      .pipe(gulp.dest(dist + "/markdown"));
+gulp.task("copy-content", function() {
+  return gulp.src("src/content/**/*")
+      .pipe(gulp.dest(dist + "/content"));
 });
 
 gulp.task("copy-images", function() {
@@ -59,7 +59,7 @@ gulp.task("watch", function() {
   gulp.watch("src/**/*", ["build"]);
 });
 
-gulp.task("copy", ["copy-bowercomponents", "copy-html", "copy-markdown", "copy-images"]);
+gulp.task("copy", ["copy-bowercomponents", "copy-html", "copy-content", "copy-images"]);
 gulp.task("build", ["scripts", "styles", "copy"]);
 
 function handleError(err) {

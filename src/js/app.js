@@ -40,12 +40,11 @@
     $routeProvider.when("/", {
       templateUrl: 'partials/home.tmpl.html',
       controller: "HomeController"
-    }).when("/guide/:name", {
+    }).when("/guide/:id", {
       templateUrl: 'partials/guide.tmpl.html',
       controller: "GuideController",
-      secure: true
     }).otherwise({
-      templateUrl: 'templates/404.html'
+      templateUrl: 'partials/404.tmpl.html'
     });
 
     $locationProvider.html5Mode(false);
