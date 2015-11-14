@@ -1,0 +1,42 @@
+md-content {
+	background-color: #eee;
+}
+
+div[ng-view] {
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
+  margin-top: 17px;
+  margin-bottom: 17px;
+
+  .padding {
+    padding: 15px 15px 5px;
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: inherit;
+    margin: 0px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+
+md-sidenav {
+
+  .brand {
+    padding: 16px 0px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+}

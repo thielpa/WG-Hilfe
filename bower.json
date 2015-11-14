@@ -1,0 +1,33 @@
+{
+  "name": "WG-Hilfe",
+  "homepage": "https://github.com/Werdenfels-Gymnasium/WG-Hilfe",
+  "authors": [
+    "DevVersion <paulgschwendtner@me.com>"
+  ],
+  "description": "Werdenfels-Gymnasium Hilfe Seite",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "hilfe",
+    "help",
+    "wg",
+    "school"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-material": "~0.11.4",
+    "angular-aria": "~1.4.7",
+    "angular-animate": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "angular-marked": "~1.0.0"
+  }
+}
