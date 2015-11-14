@@ -1,13 +1,12 @@
-body {
+md-content {
 	background-color: #eee;
 }
 
-.frameContent {
-  margin: 0 auto;
+div[ng-view] {
   width: 100%;
-  max-width: 1000px;
-  margin: 25px 7px 0px 7px;
-  border-radius: 2px;
+  max-width: 840px;
+  margin: 0 auto;
+  margin-top: 17px;
 
   .padding {
     padding: 15px 15px 5px;

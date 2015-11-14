@@ -8,7 +8,7 @@
 </head>
 <body class="layout-row">
 
-  <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-sidenav-left" tabindex="-1" ng-repeat="(key, value) in guides">
+  <md-sidenav layout="column" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-sidenav-left" tabindex="-1" ng-repeat="(key, value) in guides">
 
       <div class="brand">
         <a ng-href="#/">
@@ -20,13 +20,14 @@
       <md-menu-item ng-href="#/guide/{{ key }}" ng-label="{{ value.title }}" />
   </md-sidenav>
 
-  <div tabindex="-1" role="main" class="layout-column flex">
-    <md-toolbar layout="row">
+  <div tabindex="-1" layout="column" layout-fill role="main">
+
+    <md-toolbar class="md-whiteframe-z2">
       <div class="md-toolbar-tools">
         <md-button ng-click="toggleSidenav()" class="md-icon-button hide-gt-sm" aria-label="Sidenav" nofocus>
           <md-icon md-svg-icon="img/menu.svg"></md-icon>
         </md-button>
-        <div class="fill-height layout-row flex" style="white-space: nowrap">
+       <div class="fill-height layout-row flex" style="white-space: nowrap">
           <a ng-href="#/">
             <h2>
               <span>Werdenfels-Gymnasum Hilfe</span>
@@ -36,12 +37,12 @@
       </div>
     </md-toolbar>
 
-    <section layout="row" layout-align="center start">
-      <md-content class="frameContent md-whiteframe-1dp">
-        <div ng-view flex></div>
-      </md-content>
-    </section>
+    <md-content md-scroll-y class="layout-padding ng-scope flex" class="md-whiteframe-1dp">
 
+      <div ng-view></div>
+
+
+    </md-content>
 
   </div>
 </body>
